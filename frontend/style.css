@@ -1,0 +1,74 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#ffbf00;
+  --muted:#94a3b8;
+}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial;
+  background:linear-gradient(180deg,#07102a,#07121a);
+  color:#fff;
+  min-height:100vh;
+}
+.app{max-width:900px;margin:30px auto;padding:20px;}
+header{display:flex;justify-content:space-between;align-items:center}
+h1{margin:0}
+.coin-area{display:flex;justify-content:center;margin:40px 0}
+.coin{
+  width:200px;height:200px;border-radius:50%;position:relative;transform-style:preserve-3d;transition:transform 1s;
+}
+.coin.spin{animation:spinAnim 1s cubic-bezier(.2,.8,.2,1);}
+.coin .side{
+  position:absolute;inset:0;border-radius:50%;display:none;justify-content:center;align-items:center;
+  font-size:28px;font-weight:700;
+  /* background:radial-gradient(circle at 30% 30%, #ffd54d, #ffb300); */
+  backface-visibility:hidden;border:6px solid rgba(0,0,0,0.25);box-shadow:0 12px 30px rgba(0,0,0,0.5);
+}
+.coin .heads { color: white; background-color: gold; display: flex; }
+.coin .tails { color: white; background-color: rgb(83, 80, 80); }
+/* .coin .tails{transform:rotateY(180deg);background:radial-gradient(circle at 30% 30%, #cfd8dc, #90a4ae);} */
+@keyframes spinAnim{
+  0%{transform:rotateX(0) rotateY(0)}
+  25%{transform:rotateX(720deg) rotateY(360deg)}
+  100%{transform:rotateX(1080deg) rotateY(720deg)}
+}
+.result{font-size:32px;text-align:center;margin:10px;color:var(--accent)}
+button{padding:12px 18px;border-radius:10px;border:none;background:var(--accent);cursor:pointer;font-weight:700}
+.history{margin-top:30px;background:rgba(255,255,255,0.03);padding:12px;border-radius:8px}
+.history-item{padding:8px;border-bottom:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center}
+.modal.hidden{display:none}
+.modal-content{background:var(--card);padding:20px;border-radius:8px;width:320px;display:flex;flex-direction:column;gap:8px}
+input{padding:10px;border-radius:6px;border:none;background:#071322;color:#fff}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 95%;
+    padding: 10px;               /* SAME as normal input */
+    border-radius: 6px;
+    border: none;
+    background: #071322;
+    color: #fff;
+    font-size: 14px;
+}
+
+.password-wrapper .eye {
+    position: absolute;
+    right: 12px;                 /* perfect alignment */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    opacity: 0.7;
+}
+
+.password-wrapper .eye:hover {
+    opacity: 1;
+}

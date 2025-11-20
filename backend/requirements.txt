@@ -1,0 +1,19 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+pydantic-settings
+python-jose
+passlib[bcrypt]
+python-dotenv
+pymysql
+sqlalchemy
+
+
+# fastapi
+# uvicorn
+# sqlalchemy
+# pydantic
+# passlib[bcrypt]
+# python-jose
+# pydantic_settings

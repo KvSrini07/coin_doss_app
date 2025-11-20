@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coin Toss App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>Coin Toss</h1>
+            <div class="auth">
+                <button id="showLogin">Login</button>
+                <button id="showRegister">Register</button>
+                <button id="logoutBtn" style="display:none">Logout</button>
+            </div>
+        </header>
+        <main>
+            <div class="coin-area">
+                <div id="coin" class="coin">
+                    <div class="side heads">HEADS</div>
+                    <div class="side tails">TAILS</div>
+                </div>
+            </div>
+            <div id="result" class="result">Click TOSS</div>
+            <div class="controls">
+                <button id="tossBtn">TOSS</button>
+            </div>
+            <section class="history">
+                <h2>History</h2>
+                <div id="historyList">No records yet</div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Login/Register modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="modalTitle">Login</h3>
+            <input id="username" placeholder="username" />
+            <!-- <input id="password" placeholder="password" type="password" /> -->
+            <div class="password-wrapper">
+                <input id="password" placeholder="password" type="password" />
+                <span id="togglePassword" class="eye">👁️</span>
+            </div>
+
+            <div class="modal-actions">
+                <button id="modalSubmit">Submit</button>
+                <button id="modalClose">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="flipSound" src="coin_flip.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
