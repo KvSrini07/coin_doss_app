@@ -1,4 +1,6 @@
-const API_BASE = "http://127.0.0.1:8000/api/v1";
+// const API_BASE = "http://127.0.0.1:8000/api/v1";
+const API_BASE = "https://your-backend-url.up.railway.app";
+
 
 // UI Elements
 const tossBtn = document.getElementById("tossBtn");
