@@ -7,7 +7,7 @@ class Settings(BaseSettings):
 
     # Add type annotation (required)
     # DATABASE_URL: str = "mysql+pymysql://root:Srini%4036%2327%2Ak@localhost:3306/coin_db"
-    DATABASE_URL: str = "mysql+pymysql://root:Srini%4036%2327%2Ak@containers-us-west-75.railway.app:6103/railway"
+    DATABASE_URL: str = "mysql+pymysql://root:Srini%4036%2327%2Ak@mysql.railway.internal:3306/railway"
     
 
 
